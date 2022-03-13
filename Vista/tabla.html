@@ -1,0 +1,32 @@
+<?php require("../Controlador/bd.php");
+$datos = (SELECT("*"));
+$one[][] = "";
+$two[][] = "";
+$three[][] = "";
+echo $datos[0][1];
+for($f = 0; $f < count($datos); $f++) {
+    for($c = 0;$c < count($datos[$f]); $c++){
+        if($datos[$f][4] == 1){
+            array_push($one,$datos[$f][$c]);
+        }
+        if($datos[$f][4] == 2){
+           array_push($two,$datos[$f]);
+        }
+        if($datos[$f][4] == 3){
+            array_push($three,$datos[$f]);
+        }
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><?php echo "efe"?> </p>
+<p>a</p>
+
+</body>
+</html>

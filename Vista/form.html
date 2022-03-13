@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        h1{
+            background-color:grey;
+        }
+    </style>
+</head>
+
+<body>
+<h1 align="left" >GEMA SAS</h1>
+<h3>Formulario de carga de información</h3>
+<form enctype="multipart/form-data" action="../Modelo/upload.php" method="POST" >
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    <!-- El nombre del elemento de entrada determina el nombre en el array $_FILES -->
+    Cargar<input name="fichero_usuario" type="file" />
+    <input type="submit" value="Enviar fichero" />
+</form>
+</body>
+</html>
